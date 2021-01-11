@@ -16,6 +16,7 @@
 
 @app.route('/comment', methods=['POST'])
 def comment():
+    ## backup
     with open('/www/web_app/comment.txt', 'a') as fr:
         fr.write(time.asctime(time.localtime(time.time())) + '\n')
         fr.write(request.form.get('comment') + '\n')
